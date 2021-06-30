@@ -55,10 +55,7 @@ passport.deserializeUser(function (key, done) {
   let model;
   if (key.type === "local") {
     model = userModel;
-  } else if (key.type === "linkedin") {
-    model = linkedinModel;
-  }
-
+  } 
   model.findById(key.id, function (err, user) {
     done(err, user);
   });
