@@ -1,0 +1,114 @@
+/* Global variables that can be reused  */
+:root {
+  --main-background: linear-gradient(180deg, #FB8F8F 0%, rgba(241, 135, 149, 0.507) 100%);
+  --main-filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.35));
+
+  --mainText-color: #fff;
+
+  --main-border: 2px solid #ceb2b2;
+
+  --buttonHover-color: #fb8f8f;
+}
+
+/* Form Container */
+.loginbox{
+    padding: 3rem 3rem;
+    background: var(--main-background);
+    filter: var(--main-filter);
+    color: var(--mainText-color);
+    border: var(--main-border);
+    border-radius: 46px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    grid-area: login;
+    box-sizing: border-box;
+}
+
+/* Main Login Form */
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5rem;
+    grid-column: 1 / 2;
+    grid-row: 1/2 ;
+}
+.title{
+    font-size: 3rem;
+    color: var(--mainText-color);
+    margin: 3rem 0 3rem 0;
+}
+.form-group{
+    position: relative;
+    height: 55px;
+    max-width: 380px;
+    width: 100%;
+    background: var(--main-background);
+    filter: var(--main-filter);
+    border: var(--main-border);
+    border-radius: 46px;
+    color: var(--mainText-color);
+    margin: 10px 0;
+    padding: 0 0.4rem;
+}
+.form-group input{
+    color: var(--mainText-color);
+    background: none;
+    outline: none;
+    border: none;
+    height: 100%;
+    width: 100%;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+.form-group input::placeholder{
+    color: var(--mainText-color);
+    font-weight: 500;
+    padding-left: 1rem;
+}
+
+.login-btn{
+    width: 200px;
+    height: 50px;
+    outline: none;
+    background: var(--main-background);
+    filter: var(--main-filter);
+    border: var(--main-border);
+    border-radius: 40px;
+    color: var(--mainText-color);
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.login-btn:hover{
+    color: white;
+    background-color: var(--buttonHover-color);
+    cursor: pointer;
+}
+
+
+/* Registration */
+.others{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding-top: 50px;
+    color: var(--mainText-color);
+}
+
+.register{
+    font-style: italic;
+    font-size: 1.3rem;
+    margin-right: 4rem;
+    color: var(--mainText-color);
+}
+
+#forget, #sign-up {
+    font-style: italic;
+    color: var(--mainText-color);
+}
